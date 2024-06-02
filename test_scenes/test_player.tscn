@@ -1,0 +1,119 @@
+[gd_scene load_steps=7 format=3 uid="uid://ckmkbv3aoy6ey"]
+
+[ext_resource type="Texture2D" uid="uid://bx4taijbs05wf" path="res://addons/Tiny Swords/Factions/Knights/Troops/Warrior/Blue/Warrior_Blue.png" id="1_36xsu"]
+[ext_resource type="PackedScene" uid="uid://c37mcadht8rjg" path="res://player/player.tscn" id="2_vdidg"]
+[ext_resource type="PackedScene" uid="uid://d4klshdkw5xoq" path="res://enemies/pawn.tscn" id="3_5rfc7"]
+[ext_resource type="PackedScene" uid="uid://bx7hvq8h0bt4g" path="res://enemies/goblin.tscn" id="3_oqlvj"]
+[ext_resource type="PackedScene" uid="uid://d3t4vj42snfay" path="res://enemies/sheep.tscn" id="5_7vdg7"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_c0hfn"]
+line_spacing = 134.0
+font_size = 45
+
+[node name="TestPlayer" type="Node2D"]
+
+[node name="WarriorBlue" type="Sprite2D" parent="."]
+position = Vector2(1847, 1518)
+texture = ExtResource("1_36xsu")
+
+[node name="Label" type="Label" parent="WarriorBlue"]
+offset_left = 558.0
+offset_top = -710.0
+offset_right = 654.0
+offset_bottom = -647.0
+text = "IDLE"
+label_settings = SubResource("LabelSettings_c0hfn")
+
+[node name="Label9" type="Label" parent="WarriorBlue"]
+offset_left = -518.0
+offset_top = -841.0
+offset_right = 522.0
+offset_bottom = -778.0
+text = "0               1              2               3             4              5"
+label_settings = SubResource("LabelSettings_c0hfn")
+
+[node name="Label10" type="Label" parent="WarriorBlue"]
+offset_left = -596.0
+offset_top = -710.0
+offset_right = -558.0
+offset_bottom = 732.0
+text = "0 1 2 3 4 5 6 7"
+label_settings = SubResource("LabelSettings_c0hfn")
+autowrap_mode = 2
+
+[node name="Label2" type="Label" parent="WarriorBlue"]
+offset_left = 545.0
+offset_top = -512.0
+offset_right = 641.0
+offset_bottom = -449.0
+text = "RUN"
+label_settings = SubResource("LabelSettings_c0hfn")
+
+[node name="Label3" type="Label" parent="WarriorBlue"]
+offset_left = 564.0
+offset_top = -326.0
+offset_right = 893.0
+offset_bottom = -263.0
+text = "ATTACK_SIDE_1"
+label_settings = SubResource("LabelSettings_c0hfn")
+
+[node name="Label4" type="Label" parent="WarriorBlue"]
+offset_left = 547.0
+offset_top = -138.0
+offset_right = 876.0
+offset_bottom = -75.0
+text = "ATTACK_SIDE_2"
+label_settings = SubResource("LabelSettings_c0hfn")
+
+[node name="Label5" type="Label" parent="WarriorBlue"]
+offset_left = 547.0
+offset_top = 54.0
+offset_right = 876.0
+offset_bottom = 117.0
+text = "ATTACK_DOWN_1"
+label_settings = SubResource("LabelSettings_c0hfn")
+
+[node name="Label6" type="Label" parent="WarriorBlue"]
+offset_left = 547.0
+offset_top = 242.0
+offset_right = 925.0
+offset_bottom = 305.0
+text = "ATTACK_DOWN_2"
+label_settings = SubResource("LabelSettings_c0hfn")
+
+[node name="Label7" type="Label" parent="WarriorBlue"]
+offset_left = 550.0
+offset_top = 437.0
+offset_right = 928.0
+offset_bottom = 500.0
+text = "ATTACK_UP_1"
+label_settings = SubResource("LabelSettings_c0hfn")
+
+[node name="Label8" type="Label" parent="WarriorBlue"]
+offset_left = 550.0
+offset_top = 635.0
+offset_right = 928.0
+offset_bottom = 698.0
+text = "ATTACK_UP_2"
+label_settings = SubResource("LabelSettings_c0hfn")
+
+[node name="Player" parent="." instance=ExtResource("2_vdidg")]
+position = Vector2(544, 336)
+
+[node name="Goblin" parent="." instance=ExtResource("3_oqlvj")]
+position = Vector2(951, 180)
+
+[node name="Pawn" parent="." instance=ExtResource("3_5rfc7")]
+position = Vector2(1014, 282)
+
+[node name="Pawn2" parent="." instance=ExtResource("3_5rfc7")]
+position = Vector2(1021, 432)
+
+[node name="Pawn3" parent="." instance=ExtResource("3_5rfc7")]
+position = Vector2(1021, 574)
+
+[node name="Sheep" parent="." instance=ExtResource("5_7vdg7")]
+position = Vector2(913, 514)
+
+[node name="Sheep2" parent="." instance=ExtResource("5_7vdg7")]
+position = Vector2(881, 346)
