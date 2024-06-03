@@ -14,7 +14,6 @@ func _ready():
 
 
 func on_body_entered(body: Node2D):
-	print(body)
 	if body.is_in_group("player"):
 		var player: Player = body
 		player.heal(regeneration_amount)
