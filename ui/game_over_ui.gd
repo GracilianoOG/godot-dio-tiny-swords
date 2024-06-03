@@ -1,12 +1,12 @@
 class_name GameOverUI
 extends CanvasLayer
 
+@export var restart_delay: float = 5.0
+
+var restart_cooldown: float
+
 @onready var time_label: Label = %TimeLabel
 @onready var monsters_label: Label = %MonstersLabel
-
-
-@export var restart_delay: float = 5.0
-var restart_cooldown: float
 
 
 func _ready():
