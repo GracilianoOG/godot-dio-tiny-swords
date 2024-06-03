@@ -95,7 +95,8 @@ func update_attack_cooldown(delta: float):
 func update_ritual(delta: float):
 	# Update cooldown
 	ritual_cooldown -= delta
-	if ritual_cooldown > 0: return
+	if ritual_cooldown > 0:
+		return
 	ritual_cooldown = ritual_interval
 	
 	# Create ritual
@@ -180,7 +181,8 @@ func deal_damage():
 func update_hitbox_detection(delta: float):
 	# Timer
 	hitbox_cooldown -= delta
-	if hitbox_cooldown > 0: return
+	if hitbox_cooldown > 0:
+		return
 	
 	# Frequency
 	hitbox_cooldown = 0.5
@@ -195,7 +197,8 @@ func update_hitbox_detection(delta: float):
 
 
 func damage(amount: int):
-	if health <= 0: return
+	if health <= 0:
+		return
 	
 	health -= amount
 	
