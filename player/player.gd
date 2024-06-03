@@ -1,6 +1,8 @@
 class_name Player
 extends CharacterBody2D
 
+signal meat_collected(value: int)
+
 @export_category("Movement")
 @export var speed: float = 3.0
 
@@ -32,9 +34,6 @@ var is_attacking: bool = false
 var attack_cooldown: float = 0.0
 var hitbox_cooldown: float = 0.0
 var ritual_cooldown: float = 0.0
-
-
-signal meat_collected(value: int)
 
 
 func _ready():
@@ -82,6 +81,7 @@ func _physics_process(delta):
 	velocity = lerp(velocity, target_velocity, 0.05)
 	move_and_slide()
 
+
 func update_attack_cooldown(delta: float):
 	# Update attack cooldown
 	if is_attacking:
@@ -118,7 +118,8 @@ func read_input():
 	# Update is_running
 	was_running = is_running
 	is_running = not input_vector.is_zero_approx()
-	
+
+
 func play_run_idle_animation():
 		# Play animations
 	if not is_attacking and was_running != is_running:
@@ -127,12 +128,14 @@ func play_run_idle_animation():
 		else:
 			animation_player.play("idle")
 
+
 func rotate_sprite():
 	# flip sprite
 	if input_vector.x > 0:
 		sprite.flip_h = false
 	elif input_vector.x < 0:
 		sprite.flip_h = true
+
 
 func attack():
 	if is_attacking:
@@ -149,14 +152,14 @@ func attack():
 	
 	# Set attack to true
 	is_attacking = true
-	
-	
+
+
 func special():
 	var ritual = ritual_scene.instantiate()
 	ritual.damage_amount = ritual_damage
 	add_child(ritual)
-	
-	
+
+
 func deal_damage():
 	# var enemies = get_tree().get_nodes_in_group("enemies")
 	var bodies = sword_area.get_overlapping_bodies()
@@ -172,6 +175,7 @@ func deal_damage():
 			var dot_product = direction_to_enemy.dot(attack_direction)
 			if dot_product >= 0.3:
 				enemy.damage(sword_damage)
+
 
 func update_hitbox_detection(delta: float):
 	# Timer
