@@ -55,6 +55,9 @@ func _process(delta):
 	if Input.is_action_just_pressed("attack"):
 		attack()
 	
+	if Input.is_action_just_pressed("special"):
+		special()
+	
 	# Process animation and sprite rotation
 	play_run_idle_animation()
 	if not is_attacking:
@@ -146,6 +149,12 @@ func attack():
 	
 	# Set attack to true
 	is_attacking = true
+	
+	
+func special():
+	var ritual = ritual_scene.instantiate()
+	ritual.damage_amount = ritual_damage
+	add_child(ritual)
 	
 	
 func deal_damage():
