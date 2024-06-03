@@ -21,7 +21,6 @@ func _ready():
 
 func damage(amount: int):
 	health -= amount
-	print("Damage received: ", amount, "HP: ", health)
 	
 	# Blink effect
 	modulate = Color.RED
