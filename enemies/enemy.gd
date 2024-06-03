@@ -4,13 +4,15 @@ extends Node2D
 @export_category("Enemy Health")
 @export var health: int = 10
 @export var death_prefab: PackedScene
-var damage_digit_prefab: PackedScene
-@onready var damage_digit_marker = $DamageDigitMarker
 
 @export_category("Drops")
 @export var drop_chance: float = 0.1
 @export var drop_items: Array[PackedScene]
 @export var drop_chances: Array[float]
+
+var damage_digit_prefab: PackedScene
+
+@onready var damage_digit_marker = $DamageDigitMarker
 
 
 func _ready():
@@ -40,6 +42,7 @@ func damage(amount: int):
 	# Process death
 	if health <= 0:
 		die()
+
 
 func die():
 	# Create skull
