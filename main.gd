@@ -1,6 +1,5 @@
 extends Node2D
 
-
 @export var game_ui: CanvasLayer
 @export var game_over_ui_template: PackedScene
 
