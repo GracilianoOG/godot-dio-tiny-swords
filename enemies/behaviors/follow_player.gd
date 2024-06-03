@@ -25,7 +25,4 @@ func _physics_process(delta):
 	enemy.move_and_slide()
 
 	# flip sprite
-	if input_vector.x > 0:
-		sprite.flip_h = false
-	elif input_vector.x < 0:
-		sprite.flip_h = true
+	sprite.flip_h = input_vector.x < 0
