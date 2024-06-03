@@ -6,13 +6,16 @@ extends Node
 var enemy: Enemy
 var sprite: AnimatedSprite2D
 
+
 func _ready():
 	enemy = get_parent()
 	sprite = enemy.get_node("AnimatedSprite2D")
 
+
 func _physics_process(delta):
 	# Ignore game over
-	if GameManager.is_game_over: return
+	if GameManager.is_game_over:
+		return
 	
 	# Calculate direction
 	var player_position = GameManager.player_position
