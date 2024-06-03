@@ -136,7 +136,10 @@ func attack():
 		return
 		
 	# Play animation
-	animation_player.play("attack_side_1")
+	if randi() % 2 == 0:
+		animation_player.play("attack_side_1")
+	else:
+		animation_player.play("attack_side_2")
 	
 	# Cooldown attack
 	attack_cooldown = 0.6
