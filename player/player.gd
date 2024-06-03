@@ -198,7 +198,6 @@ func damage(amount: int):
 	if health <= 0: return
 	
 	health -= amount
-	print("(P) Damage received: ", amount, "HP: ", health)
 	
 	modulate = Color.RED
 	var tween = create_tween()
@@ -217,7 +216,6 @@ func die():
 		death_object.position = position
 		get_parent().add_child(death_object)
 	
-	print("Player died!")
 	queue_free()
 
 
@@ -225,5 +223,5 @@ func heal(amount: int):
 	health += amount
 	if health > max_health:
 		health = max_health
-	print("Player recebeu cura de ", amount, ". A vida total é de: ", health, "/", max_health)
+
 	return health
