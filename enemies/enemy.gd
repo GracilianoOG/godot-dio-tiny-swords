@@ -83,10 +83,10 @@ func get_random_drop_item() -> PackedScene:
 	# Spin the wheel
 	var needle: float = 0.0
 	for i in drop_items.size():
-		var drop_item = drop_items[i]
+		var item = drop_items[i]
 		var drop_chance = drop_chances[i] if i < drop_chances.size() else 1
 		if random_value <= drop_chance + needle:
-			return drop_item
+			return item
 		needle += drop_chance
 	
 	return drop_items[0]
