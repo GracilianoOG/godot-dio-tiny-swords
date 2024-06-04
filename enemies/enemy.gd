@@ -74,8 +74,8 @@ func get_random_drop_item() -> PackedScene:
 	
 	# Calculate max chance
 	var max_chance: float = 0.0
-	for drop_chance in drop_chances:
-		max_chance += drop_chance
+	for chance in drop_chances:
+		max_chance += chance
 	
 	# Throw dice
 	var random_value = randf() * max_chance
