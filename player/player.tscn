@@ -247,6 +247,7 @@ shape = SubResource("CircleShape2D_nmrjh")
 debug_color = Color(0.964706, 0.129412, 0, 0.12549)
 
 [node name="HealthProgressBar" type="ProgressBar" parent="."]
+z_index = 10
 offset_left = -24.0
 offset_top = 6.0
 offset_right = 24.0
