@@ -19,7 +19,7 @@ signal meat_collected(value: int)
 @export var max_health: int = 100
 
 @export_category("Mana")
-@export var mana: int = 100
+@export var mana: float = 100.0
 @export var max_mana: int = 100
 
 @export_category("Prefab")
@@ -75,8 +75,15 @@ func _process(delta):
 	health_progress_bar.value = health
 
 	# Update mana bar
+	if(mana < max_mana):
+		mana += 0.05
+	
+	if(mana > max_mana):
+		mana = max_mana
+	
 	mana_progress_bar.max_value = max_mana
 	mana_progress_bar.value = mana
+	print(mana)
 
 
 func _physics_process(delta):
@@ -150,10 +157,6 @@ func attack():
 		
 	# Play animation
 	animation_player.play("attack_side_1" if randi() % 2 == 0 else "attack_side_2")
-	#if randi() % 2 == 0:
-		#animation_player.play("attack_side_1")
-	#else:
-		#animation_player.play("attack_side_2")
 	
 	# Cooldown attack
 	attack_cooldown = 0.6
