@@ -212,11 +212,11 @@ func damage(amount: int):
 	
 	health -= amount
 	
-	modulate = Color.RED
+	sprite.modulate = Color.RED
 	var tween = create_tween()
 	tween.set_ease(Tween.EASE_IN)
 	tween.set_trans(Tween.TRANS_QUINT)
-	tween.tween_property(self, "modulate", Color.WHITE, 0.3)
+	tween.tween_property(sprite, "modulate", Color.WHITE, 0.3)
 	
 	if health <= 0:
 		die()
