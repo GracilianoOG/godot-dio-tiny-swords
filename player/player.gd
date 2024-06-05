@@ -70,9 +70,6 @@ func _process(delta):
 	# Process damage
 	update_hitbox_detection(delta)
 	
-	# Execute ritual
-	update_ritual(delta)
-	
 	# Update health bar
 	health_progress_bar.max_value = max_health
 	health_progress_bar.value = health
