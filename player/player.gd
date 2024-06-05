@@ -13,6 +13,7 @@ signal meat_collected(value: int)
 @export var ritual_damage: int = 1
 @export var ritual_interval: float = 30.0
 @export var ritual_scene: PackedScene
+@export var ritual_cost: float = 60.0
 
 @export_category("Health")
 @export var health: int = 100
@@ -162,14 +163,12 @@ func attack():
 
 
 func special():
-	var special_cost = 25
-	
-	if mana < special_cost or has_node("Ritual"):
+	if mana < ritual_cost or has_node("Ritual"):
 		return
 	
 	var ritual = ritual_scene.instantiate()
 	ritual.damage_amount = ritual_damage
-	mana -= special_cost
+	mana -= ritual_cost
 	add_child(ritual)
 
 
