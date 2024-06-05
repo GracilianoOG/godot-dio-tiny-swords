@@ -76,12 +76,7 @@ func _process(delta):
 	health_progress_bar.value = health
 
 	# Update mana bar
-	if(mana < max_mana):
-		mana += mana_regen_factor
-	
-	if(mana > max_mana):
-		mana = max_mana
-	
+	regen_mana_over_time()
 	mana_progress_bar.max_value = max_mana
 	mana_progress_bar.value = mana
 	print(mana)
@@ -243,3 +238,11 @@ func heal(amount: int):
 		health = max_health
 
 	return health
+
+
+func regen_mana_over_time():
+	if(mana < max_mana):
+		mana += mana_regen_factor
+	
+	if(mana > max_mana):
+		mana = max_mana
