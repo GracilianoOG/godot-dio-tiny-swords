@@ -18,6 +18,10 @@ signal meat_collected(value: int)
 @export var health: int = 100
 @export var max_health: int = 100
 
+@export_category("Mana")
+@export var mana: int = 100
+@export var max_mana: int = 100
+
 @export_category("Prefab")
 @export var death_prefab: PackedScene
 
@@ -26,6 +30,7 @@ signal meat_collected(value: int)
 @onready var sword_area: Area2D = $SwordArea
 @onready var hitbox_area: Area2D = $HitboxArea
 @onready var health_progress_bar: ProgressBar = $HealthProgressBar
+@onready var mana_progress_bar: ProgressBar = $ManaProgressBar
 
 var input_vector: Vector2 = Vector2(0, 0)
 var is_running: bool = false
@@ -71,6 +76,10 @@ func _process(delta):
 	# Update health bar
 	health_progress_bar.max_value = max_health
 	health_progress_bar.value = health
+
+	# Update mana bar
+	mana_progress_bar.max_value = max_mana
+	mana_progress_bar.value = mana
 
 
 func _physics_process(delta):
