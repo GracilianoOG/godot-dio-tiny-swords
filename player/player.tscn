@@ -1,4 +1,4 @@
-[gd_scene load_steps=20 format=3 uid="uid://c37mcadht8rjg"]
+[gd_scene load_steps=22 format=3 uid="uid://c37mcadht8rjg"]
 
 [ext_resource type="Texture2D" uid="uid://bx4taijbs05wf" path="res://addons/Tiny Swords/Factions/Knights/Troops/Warrior/Blue/Warrior_Blue.png" id="1_bfnw2"]
 [ext_resource type="Script" path="res://player/player.gd" id="1_up26c"]
@@ -206,6 +206,12 @@ bg_color = Color(0, 0, 0, 1)
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_pnbdf"]
 bg_color = Color(0.968587, 5.67943e-06, 7.70092e-07, 1)
 
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_uhbxr"]
+bg_color = Color(0, 0, 0, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_ijgtb"]
+bg_color = Color(3.36915e-06, 0.770533, 0.738762, 1)
+
 [node name="Player" type="CharacterBody2D" groups=["player"]]
 script = ExtResource("1_up26c")
 ritual_damage = 2
@@ -256,4 +262,15 @@ theme_override_styles/background = SubResource("StyleBoxFlat_r2adb")
 theme_override_styles/fill = SubResource("StyleBoxFlat_pnbdf")
 value = 75.0
 rounded = true
+show_percentage = false
+
+[node name="ManaProgressBar" type="ProgressBar" parent="."]
+z_index = 10
+offset_left = -24.0
+offset_top = 10.0
+offset_right = 24.0
+offset_bottom = 14.0
+theme_override_styles/background = SubResource("StyleBoxFlat_uhbxr")
+theme_override_styles/fill = SubResource("StyleBoxFlat_ijgtb")
+value = 50.0
 show_percentage = false
