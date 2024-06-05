@@ -163,7 +163,8 @@ func attack():
 
 func special():
 	var special_cost = 25
-	if mana < special_cost:
+	
+	if mana < special_cost or has_node("Ritual"):
 		return
 	
 	var ritual = ritual_scene.instantiate()
