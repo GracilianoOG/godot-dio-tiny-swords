@@ -21,6 +21,7 @@ signal meat_collected(value: int)
 @export_category("Mana")
 @export var mana: float = 100.0
 @export var max_mana: int = 100
+@export var mana_regen_factor: float = 0.05
 
 @export_category("Prefab")
 @export var death_prefab: PackedScene
@@ -76,7 +77,7 @@ func _process(delta):
 
 	# Update mana bar
 	if(mana < max_mana):
-		mana += 0.05
+		mana += mana_regen_factor
 	
 	if(mana > max_mana):
 		mana = max_mana
