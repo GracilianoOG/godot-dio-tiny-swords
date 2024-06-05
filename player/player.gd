@@ -165,8 +165,13 @@ func attack():
 
 
 func special():
+	var special_cost = 25
+	if mana < special_cost:
+		return
+	
 	var ritual = ritual_scene.instantiate()
 	ritual.damage_amount = ritual_damage
+	mana -= special_cost
 	add_child(ritual)
 
 
