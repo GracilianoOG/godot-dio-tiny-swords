@@ -197,8 +197,9 @@ _data = {
 [sub_resource type="CircleShape2D" id="CircleShape2D_aib1t"]
 radius = 121.004
 
-[sub_resource type="CircleShape2D" id="CircleShape2D_nmrjh"]
-radius = 36.0555
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_v2m0s"]
+radius = 16.0
+height = 56.0
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_r2adb"]
 bg_color = Color(0, 0, 0, 1)
@@ -246,8 +247,8 @@ debug_color = Color(0.89764, 0.145738, 0.688796, 0)
 [node name="HitboxArea" type="Area2D" parent="."]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="HitboxArea"]
-position = Vector2(0, -30)
-shape = SubResource("CircleShape2D_nmrjh")
+position = Vector2(0, -27)
+shape = SubResource("CapsuleShape2D_v2m0s")
 debug_color = Color(0.964706, 0.129412, 0, 0.12549)
 
 [node name="HealthProgressBar" type="ProgressBar" parent="."]
