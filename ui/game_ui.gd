@@ -8,4 +8,4 @@ extends CanvasLayer
 func _process(delta: float):
 	# Update labels
 	timer_label.text = GameManager.time_elapsed_string
-	meat_label.text = str(GameManager.meat_counter)
+	meat_label.text = str(GameManager.monsters_defeated_counter)
