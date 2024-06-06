@@ -80,7 +80,6 @@ func _process(delta):
 	regen_mana_over_time()
 	mana_progress_bar.max_value = max_mana
 	mana_progress_bar.value = mana
-	print(mana)
 
 
 func _physics_process(delta):
