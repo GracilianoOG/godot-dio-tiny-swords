@@ -201,8 +201,7 @@ func update_hitbox_detection(delta: float):
 	var bodies = hitbox_area.get_overlapping_bodies()
 	for body in bodies:
 		if body.is_in_group("enemies"):
-			var damage_amount = 1
-			damage(damage_amount)
+			damage(body.damage_caused)
 
 
 func damage(amount: int):
