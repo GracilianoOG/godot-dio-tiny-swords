@@ -217,8 +217,6 @@ script = ExtResource("1_up26c")
 ritual_damage = 2
 ritual_interval = 15.0
 ritual_scene = ExtResource("2_aaqv4")
-health = 50
-max_health = 50
 death_prefab = ExtResource("2_7rjn7")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
