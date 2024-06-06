@@ -5,6 +5,9 @@ extends Node2D
 @export var health: int = 10
 @export var death_prefab: PackedScene
 
+@export_category("Enemy Damage")
+@export var damage_caused: int = 5
+
 @export_category("Drops")
 @export var drop_chance: float = 0.1
 @export var drop_items: Array[PackedScene]
