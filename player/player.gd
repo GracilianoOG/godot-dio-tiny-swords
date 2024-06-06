@@ -1,7 +1,7 @@
 class_name Player
 extends CharacterBody2D
 
-signal meat_collected(value: int)
+#signal meat_collected(value: int)
 
 @export_category("Movement")
 @export var speed: float = 3.0
@@ -45,9 +45,9 @@ var ritual_cooldown: float = 0.0
 
 func _ready():
 	GameManager.player = self
-	meat_collected.connect(func(): 
-		GameManager.meat_counter += 1
-	)
+	#meat_collected.connect(func(): 
+		#GameManager.meat_counter += 1
+	#)
 
 
 func _process(delta):
