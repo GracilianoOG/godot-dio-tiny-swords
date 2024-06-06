@@ -214,6 +214,7 @@ bg_color = Color(0, 0, 0, 1)
 bg_color = Color(3.36915e-06, 0.770533, 0.738762, 1)
 
 [node name="Player" type="CharacterBody2D" groups=["player"]]
+motion_mode = 1
 script = ExtResource("1_up26c")
 ritual_damage = 2
 ritual_interval = 15.0
