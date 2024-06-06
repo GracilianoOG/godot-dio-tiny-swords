@@ -65,6 +65,7 @@ motion_mode = 1
 script = ExtResource("1_myjvo")
 health = 4
 death_prefab = ExtResource("2_8ei1d")
+damage_caused = 2
 drop_items = Array[PackedScene]([ExtResource("3_nlh0q")])
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
