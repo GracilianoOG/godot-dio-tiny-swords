@@ -64,7 +64,6 @@ radius = 16.0078
 scale = Vector2(2, 2)
 motion_mode = 1
 script = ExtResource("1_n8cid")
-health = 12
 death_prefab = ExtResource("2_8xm6f")
 damage_caused = 8
 drop_chance = 0.05
