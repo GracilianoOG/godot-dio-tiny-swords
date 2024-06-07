@@ -16,14 +16,33 @@ extends Node2D
 var damage_digit_prefab: PackedScene
 
 @onready var damage_digit_marker = $DamageDigitMarker
+@onready var follow_player = $FollowPlayer
+@onready var MAX_SPEED = follow_player.speed
 
 
 func _ready():
 	damage_digit_prefab = preload("res://misc/damage_digit.tscn")
 
 
+func _process(_delta):
+	reduce_speed_on_hit()
+
+
+func reduce_speed_on_hit():
+	var current_speed = follow_player.speed
+	
+	if current_speed < MAX_SPEED:
+		current_speed += 0.02
+		
+		if current_speed > MAX_SPEED:
+			current_speed = MAX_SPEED
+	
+	follow_player.speed = current_speed
+
+
 func damage(amount: int):
 	health -= amount
+	follow_player.speed *= 0.2
 	
 	# Blink effect
 	modulate = Color.RED
