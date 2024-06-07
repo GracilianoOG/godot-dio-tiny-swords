@@ -1,0 +1,75 @@
+[gd_scene load_steps=11 format=3 uid="uid://cu657ndn886da"]
+
+[ext_resource type="PackedScene" uid="uid://bx7hvq8h0bt4g" path="res://enemies/goblin.tscn" id="1_m7o08"]
+[ext_resource type="Texture2D" uid="uid://cgsmamfeulje7" path="res://addons/Tiny Swords/Factions/Goblins/Troops/Torch/Blue/Torch_Blue.png" id="2_kqp5a"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_hvs48"]
+atlas = ExtResource("2_kqp5a")
+region = Rect2(0, 192, 192, 192)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_g4fwy"]
+atlas = ExtResource("2_kqp5a")
+region = Rect2(192, 192, 192, 192)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_k0aeg"]
+atlas = ExtResource("2_kqp5a")
+region = Rect2(384, 192, 192, 192)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_4m4to"]
+atlas = ExtResource("2_kqp5a")
+region = Rect2(576, 192, 192, 192)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_lfgjs"]
+atlas = ExtResource("2_kqp5a")
+region = Rect2(768, 192, 192, 192)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_i51va"]
+atlas = ExtResource("2_kqp5a")
+region = Rect2(960, 192, 192, 192)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_xcegc"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_hvs48")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_g4fwy")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_k0aeg")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_4m4to")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_lfgjs")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_i51va")
+}],
+"loop": true,
+"name": &"default",
+"speed": 10.0
+}]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_50w0r"]
+radius = 13.0
+
+[node name="Goblin" instance=ExtResource("1_m7o08")]
+health = 6
+damage_caused = 4
+drop_chance = 0.025
+
+[node name="AnimatedSprite2D" parent="." index="0"]
+position = Vector2(0, -24.5)
+scale = Vector2(0.8, 0.8)
+sprite_frames = SubResource("SpriteFrames_xcegc")
+frame_progress = 0.0
+
+[node name="CollisionShape2D" parent="." index="1"]
+position = Vector2(0, -14.5)
+shape = SubResource("CircleShape2D_50w0r")
+
+[node name="DamageDigitMarker" parent="." index="3"]
+position = Vector2(0, -33.5)
