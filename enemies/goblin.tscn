@@ -66,6 +66,7 @@ motion_mode = 1
 script = ExtResource("1_n8cid")
 health = 12
 death_prefab = ExtResource("2_8xm6f")
+damage_caused = 8
 drop_chance = 0.05
 drop_items = Array[PackedScene]([ExtResource("3_l085l"), ExtResource("4_vdj2w")])
 drop_chances = Array[float]([0.8, 0.2])
