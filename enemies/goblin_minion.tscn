@@ -71,5 +71,8 @@ frame_progress = 0.0
 position = Vector2(0, -14.5)
 shape = SubResource("CircleShape2D_50w0r")
 
+[node name="FollowPlayer" parent="." index="2"]
+speed = 1.6
+
 [node name="DamageDigitMarker" parent="." index="3"]
 position = Vector2(0, -33.5)
