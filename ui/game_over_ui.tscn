@@ -150,3 +150,4 @@ theme = ExtResource("4_r3kcp")
 text = "Restart"
 
 [connection signal="pressed" from="Menu" to="." method="_on_menu_pressed"]
+[connection signal="pressed" from="Restart" to="." method="_on_restart_pressed"]
