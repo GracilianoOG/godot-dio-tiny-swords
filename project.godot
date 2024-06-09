@@ -19,6 +19,11 @@ config/icon="res://icon.svg"
 
 GameManager="*res://game_manager.gd"
 
+[display]
+
+mouse_cursor/custom_image="res://addons/Tiny Swords/UI/Pointers/01.png"
+mouse_cursor/custom_image_hotspot=Vector2(25, 20)
+
 [input]
 
 move_left={
