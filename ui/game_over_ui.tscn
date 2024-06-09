@@ -1,8 +1,9 @@
-[gd_scene load_steps=8 format=3 uid="uid://b2iwkjlllnm6j"]
+[gd_scene load_steps=9 format=3 uid="uid://b2iwkjlllnm6j"]
 
 [ext_resource type="Script" path="res://ui/game_over_ui.gd" id="1_arolu"]
 [ext_resource type="Texture2D" uid="uid://bbv1kohu0rdmb" path="res://addons/Tiny Swords/UI/Ribbons/Ribbon_Red_3Slides.png" id="1_f4y3d"]
 [ext_resource type="Texture2D" uid="uid://j3n7hi20ogd7" path="res://addons/Tiny Swords/UI/Banners/Banner_Horizontal.png" id="2_7sjod"]
+[ext_resource type="Theme" uid="uid://boj6554acc23l" path="res://ui/default_btn_theme.tres" id="4_r3kcp"]
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_wvrv6"]
 texture = ExtResource("1_f4y3d")
@@ -38,9 +39,9 @@ anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
 offset_left = -251.5
-offset_top = -174.0
+offset_top = -250.0
 offset_right = 251.5
-offset_bottom = -27.0
+offset_bottom = -103.0
 grow_horizontal = 2
 grow_vertical = 2
 theme_override_styles/panel = SubResource("StyleBoxTexture_wvrv6")
@@ -65,9 +66,9 @@ anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
 offset_left = -226.0
-offset_top = 41.0
+offset_top = -35.0
 offset_right = 226.0
-offset_bottom = 220.002
+offset_bottom = 144.002
 grow_horizontal = 2
 grow_vertical = 2
 theme_override_styles/panel = SubResource("StyleBoxTexture_e6171")
@@ -113,3 +114,37 @@ unique_name_in_owner = true
 layout_mode = 2
 text = "999"
 label_settings = SubResource("LabelSettings_nng2c")
+
+[node name="Menu" type="Button" parent="."]
+custom_minimum_size = Vector2(192, 64)
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -200.0
+offset_top = 186.0
+offset_right = -8.0
+offset_bottom = 250.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 6
+theme = ExtResource("4_r3kcp")
+text = "Menu"
+
+[node name="Restart" type="Button" parent="."]
+custom_minimum_size = Vector2(192, 64)
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = 2.0
+offset_top = 186.0
+offset_right = 194.0
+offset_bottom = 250.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 6
+theme = ExtResource("4_r3kcp")
+text = "Restart"
