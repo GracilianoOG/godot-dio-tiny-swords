@@ -38,3 +38,5 @@ custom_minimum_size = Vector2(192, 64)
 layout_mode = 2
 theme = ExtResource("1_hw1r4")
 text = "Exit"
+
+[connection signal="pressed" from="HBoxContainer/VBoxContainer/ExitBtn" to="." method="_on_exit_btn_pressed"]
