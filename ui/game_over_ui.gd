@@ -24,3 +24,7 @@ func _process(delta):
 func restart_game():
 	GameManager.reset()
 	get_tree().reload_current_scene()
+
+
+func _on_menu_pressed():
+	get_tree().change_scene_to_file("res://ui/game_menu.tscn")
