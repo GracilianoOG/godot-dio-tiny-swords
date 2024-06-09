@@ -1,0 +1,38 @@
+[gd_scene load_steps=2 format=3 uid="uid://dpppg5nio46ub"]
+
+[ext_resource type="Theme" uid="uid://boj6554acc23l" path="res://ui/default_btn_theme.tres" id="1_hw1r4"]
+
+[node name="GameMenu" type="MarginContainer"]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="HBoxContainer" type="HBoxContainer" parent="."]
+layout_mode = 2
+
+[node name="VBoxContainer" type="VBoxContainer" parent="HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 6
+size_flags_vertical = 4
+
+[node name="StartBtn" type="Button" parent="HBoxContainer/VBoxContainer"]
+custom_minimum_size = Vector2(192, 64)
+layout_mode = 2
+theme = ExtResource("1_hw1r4")
+text = "Start
+"
+
+[node name="CreditsBtn" type="Button" parent="HBoxContainer/VBoxContainer"]
+custom_minimum_size = Vector2(192, 64)
+layout_mode = 2
+theme = ExtResource("1_hw1r4")
+text = "Credits
+"
+
+[node name="ExitBtn" type="Button" parent="HBoxContainer/VBoxContainer"]
+custom_minimum_size = Vector2(192, 64)
+layout_mode = 2
+theme = ExtResource("1_hw1r4")
+text = "Exit"
