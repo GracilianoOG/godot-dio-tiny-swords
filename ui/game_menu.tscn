@@ -1,5 +1,6 @@
-[gd_scene load_steps=2 format=3 uid="uid://dpppg5nio46ub"]
+[gd_scene load_steps=3 format=3 uid="uid://dpppg5nio46ub"]
 
+[ext_resource type="Script" path="res://ui/game_menu.gd" id="1_fo56l"]
 [ext_resource type="Theme" uid="uid://boj6554acc23l" path="res://ui/default_btn_theme.tres" id="1_hw1r4"]
 
 [node name="GameMenu" type="MarginContainer"]
@@ -8,6 +9,7 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
+script = ExtResource("1_fo56l")
 
 [node name="HBoxContainer" type="HBoxContainer" parent="."]
 layout_mode = 2
