@@ -1,0 +1,22 @@
+[gd_resource type="Theme" load_steps=6 format=3 uid="uid://boj6554acc23l"]
+
+[ext_resource type="Texture2D" uid="uid://d2ngxqhpyk18p" path="res://addons/Tiny Swords/UI/Buttons/Button_Blue_3Slides.png" id="1_v66rn"]
+[ext_resource type="Texture2D" uid="uid://b7p0od8hofdfs" path="res://addons/Tiny Swords/UI/Buttons/Button_Blue_3Slides_Pressed.png" id="2_0m5ue"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_bueq1"]
+content_margin_bottom = 15.0
+texture = ExtResource("1_v66rn")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_1eaxc"]
+content_margin_bottom = 15.0
+texture = ExtResource("1_v66rn")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_221sv"]
+content_margin_bottom = 6.0
+texture = ExtResource("2_0m5ue")
+
+[resource]
+default_font_size = 26
+Button/styles/hover = SubResource("StyleBoxTexture_bueq1")
+Button/styles/normal = SubResource("StyleBoxTexture_1eaxc")
+Button/styles/pressed = SubResource("StyleBoxTexture_221sv")
