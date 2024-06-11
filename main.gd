@@ -6,6 +6,7 @@ extends Node2D
 
 func _ready():
 	GameManager.game_over.connect(trigger_game_over)
+	Input.set_mouse_mode(Input.MOUSE_MODE_HIDDEN)
 
 
 func trigger_game_over():
