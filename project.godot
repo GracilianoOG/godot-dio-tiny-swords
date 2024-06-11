@@ -25,6 +25,10 @@ window/stretch/mode="canvas_items"
 mouse_cursor/custom_image="res://addons/Tiny Swords/UI/Pointers/01.png"
 mouse_cursor/custom_image_hotspot=Vector2(25, 20)
 
+[gui]
+
+theme/custom_font="res://addons/Middle/Middle.ttf"
+
 [input]
 
 move_left={
