@@ -115,39 +115,32 @@ layout_mode = 2
 text = "999"
 label_settings = SubResource("LabelSettings_nng2c")
 
-[node name="Menu" type="Button" parent="."]
-custom_minimum_size = Vector2(192, 64)
+[node name="HBoxContainer" type="HBoxContainer" parent="."]
 anchors_preset = 8
 anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-offset_left = -200.0
-offset_top = 186.0
-offset_right = -8.0
-offset_bottom = 250.0
-grow_horizontal = 2
-grow_vertical = 2
-size_flags_horizontal = 6
-theme = ExtResource("4_r3kcp")
-text = "Menu"
-
-[node name="Restart" type="Button" parent="."]
-custom_minimum_size = Vector2(192, 64)
-anchors_preset = 8
-anchor_left = 0.5
-anchor_top = 0.5
-anchor_right = 0.5
-anchor_bottom = 0.5
-offset_left = 2.0
+offset_left = -194.0
 offset_top = 186.0
 offset_right = 194.0
 offset_bottom = 250.0
 grow_horizontal = 2
 grow_vertical = 2
+
+[node name="Restart" type="Button" parent="HBoxContainer"]
+custom_minimum_size = Vector2(192, 64)
+layout_mode = 2
 size_flags_horizontal = 6
 theme = ExtResource("4_r3kcp")
 text = "Restart"
 
-[connection signal="pressed" from="Menu" to="." method="_on_menu_pressed"]
-[connection signal="pressed" from="Restart" to="." method="_on_restart_pressed"]
+[node name="Menu" type="Button" parent="HBoxContainer"]
+custom_minimum_size = Vector2(192, 64)
+layout_mode = 2
+size_flags_horizontal = 6
+theme = ExtResource("4_r3kcp")
+text = "Menu"
+
+[connection signal="pressed" from="HBoxContainer/Restart" to="." method="_on_restart_pressed"]
+[connection signal="pressed" from="HBoxContainer/Menu" to="." method="_on_menu_pressed"]
