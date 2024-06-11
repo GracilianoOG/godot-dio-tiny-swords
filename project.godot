@@ -21,6 +21,7 @@ GameManager="*res://game_manager.gd"
 
 [display]
 
+window/stretch/mode="canvas_items"
 mouse_cursor/custom_image="res://addons/Tiny Swords/UI/Pointers/01.png"
 mouse_cursor/custom_image_hotspot=Vector2(25, 20)
 
