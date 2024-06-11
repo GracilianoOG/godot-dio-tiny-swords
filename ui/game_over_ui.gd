@@ -8,6 +8,7 @@ extends CanvasLayer
 func _ready():
 	time_label.text = GameManager.time_elapsed_string
 	monsters_label.text = str(GameManager.monsters_defeated_counter)
+	Input.set_mouse_mode(Input.MOUSE_MODE_VISIBLE)
 
 
 func _on_menu_pressed():
