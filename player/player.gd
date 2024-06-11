@@ -185,7 +185,7 @@ func deal_damage():
 				attack_direction = Vector2.RIGHT
 			var dot_product = direction_to_enemy.dot(attack_direction)
 			if dot_product >= 0.3:
-				enemy.damage(sword_damage)
+				enemy.damage(sword_damage + randi() % 4)
 
 
 func update_hitbox_detection(delta: float):
