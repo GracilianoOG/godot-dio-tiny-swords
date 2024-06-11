@@ -4,15 +4,15 @@
 [ext_resource type="Texture2D" uid="uid://b7p0od8hofdfs" path="res://addons/Tiny Swords/UI/Buttons/Button_Blue_3Slides_Pressed.png" id="2_0m5ue"]
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_bueq1"]
-content_margin_bottom = 15.0
+content_margin_bottom = 20.0
 texture = ExtResource("1_v66rn")
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_1eaxc"]
-content_margin_bottom = 15.0
+content_margin_bottom = 20.0
 texture = ExtResource("1_v66rn")
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_221sv"]
-content_margin_bottom = 6.0
+content_margin_bottom = 11.0
 texture = ExtResource("2_0m5ue")
 
 [resource]
