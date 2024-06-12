@@ -68,4 +68,5 @@ theme = ExtResource("1_hw1r4")
 text = "Exit"
 
 [connection signal="pressed" from="Container/HBoxContainer/VBoxContainer/StartBtn" to="." method="_on_start_btn_pressed"]
+[connection signal="pressed" from="Container/HBoxContainer/VBoxContainer/CreditsBtn" to="." method="_on_credits_btn_pressed"]
 [connection signal="pressed" from="Container/HBoxContainer/VBoxContainer/ExitBtn" to="." method="_on_exit_btn_pressed"]
