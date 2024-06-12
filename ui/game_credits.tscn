@@ -1,6 +1,7 @@
-[gd_scene load_steps=3 format=3 uid="uid://c3irvfnph57in"]
+[gd_scene load_steps=4 format=3 uid="uid://c3irvfnph57in"]
 
 [ext_resource type="Texture2D" uid="uid://hmm6upe3hswi" path="res://addons/Tiny Swords/UI/Banners/Carved_9Slides.png" id="1_e022u"]
+[ext_resource type="Script" path="res://ui/game_credits.gd" id="1_k5eeg"]
 [ext_resource type="Theme" uid="uid://boj6554acc23l" path="res://ui/default_btn_theme.tres" id="2_ee5di"]
 
 [node name="GameCredits" type="Control"]
@@ -10,6 +11,7 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
+script = ExtResource("1_k5eeg")
 
 [node name="ColorRect" type="ColorRect" parent="."]
 layout_mode = 1
@@ -43,8 +45,10 @@ offset_bottom = -62.0
 grow_horizontal = 2
 grow_vertical = 0
 
-[node name="Button" type="Button" parent="VBoxContainer"]
+[node name="Back" type="Button" parent="VBoxContainer"]
 custom_minimum_size = Vector2(192, 64)
 layout_mode = 2
 theme = ExtResource("2_ee5di")
 text = "Back"
+
+[connection signal="pressed" from="VBoxContainer/Back" to="." method="_on_back_pressed"]
