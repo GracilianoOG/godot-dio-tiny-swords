@@ -70,11 +70,10 @@ func die():
 	if death_prefab:
 		var death_object = death_prefab.instantiate()
 		death_object.position = position
+		# Drop loot
+		if randf() <= drop_chance:
+			death_object.loot = choose_item_to_drop()
 		get_parent().add_child(death_object)
-	
-	# Drop loot
-	if randf() <= drop_chance:
-		drop_item()
 	
 	# Increase counter
 	GameManager.monsters_defeated_counter += 1
@@ -83,10 +82,10 @@ func die():
 	queue_free()
 
 
-func drop_item() -> void:
+func choose_item_to_drop():
 	var drop = get_random_drop_item().instantiate()
 	drop.position = position
-	get_parent().add_child(drop)
+	return drop
 
 
 func get_random_drop_item() -> PackedScene:
