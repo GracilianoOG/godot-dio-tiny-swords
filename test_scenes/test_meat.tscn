@@ -10,10 +10,7 @@ position = Vector2(108, 136)
 health = 75
 
 [node name="Meat" parent="." instance=ExtResource("2_65128")]
-position = Vector2(215, 379)
 
 [node name="Meat2" parent="." instance=ExtResource("2_65128")]
-position = Vector2(402, 268)
 
 [node name="Meat3" parent="." instance=ExtResource("2_65128")]
-position = Vector2(512, 124)
